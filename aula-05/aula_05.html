@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #bloco{
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bloco"></div>
+    <p id="texto"></p>
+
+
+    <script>
+        //a utilização do "on" ocorre quando queremos eventos que resulte na mesma situação/comportamento
+        // quando queremos q os eventos usem o mesmo codigo ou eventos usem codigos/rotinas separadas
+        /**
+    $("#bloco").on('click dblclick', ()=>{
+        $("#texto").text("click no quadrado")
+        alert("teste")
+    })*/
+   $("#bloco").on({
+    click: () =>{$("#texto").text("Clique no quadro")},
+    mouseenter:()=>{$("#texto").text("Mouse entrou no quadrado")},
+    mouseleave:()=>{$("#texto").text("Mouse saiu do quadrado")},
+    dblclick:()=>{$("#texto").text(alert("double clicado"))}
+   })
+   
+    </script>
+</body>
+</html>
